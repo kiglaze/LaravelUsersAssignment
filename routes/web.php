@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/users', 'UsersController@index')->name('users.index');
+Route::get('/users/create', 'UsersController@create')->name('users.create');
+Route::get('/users/edit/{user}', 'UsersController@edit')->name('users.edit');
