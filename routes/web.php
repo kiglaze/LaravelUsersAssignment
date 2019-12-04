@@ -12,9 +12,7 @@
 */
 
 Route::get('/', 'UsersController@index')->name('users.index');
-Route::get('/users', 'UsersController@index')->name('users.index');
-Route::get('/users/create', 'UsersController@create')->name('users.create');
-Route::get('/users/edit/{user}', 'UsersController@edit')->name('users.edit');
+Route::get('/users', 'UsersController@index');
 Route::patch('/users/updateCurrent', 'UsersController@updateCurrent')->name('users.updateCurrent');
 
 Auth::routes();
