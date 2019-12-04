@@ -17,14 +17,20 @@
                     <h1>Edit User Info</h1>
 
                     {{ Form::model( Auth::user(), ['method' => 'PATCH', 'route' => 'users.updateCurrent'] ) }}
-                        <div>
+                        <div class="field">
                             {{ Form::label('name', 'Name: ') }}
-                            {{ Form::text('name') }}
+                            <div class="control">
+                                {{ Form::text('name') }}
+                                <p class="help is-danger">{{ $errors->first('name') }}</p>
+                            </div>
                         </div>
 
-                        <div>
+                        <div class="field">
                             {{ Form::label('email', 'Email: ') }}
-                            {{ Form::text('email') }}
+                            <div class="control">
+                                {{ Form::text('email') }}
+                                <p class="help is-danger">{{ $errors->first('email') }}</p>
+                            </div>
                         </div>
 
                         <div>

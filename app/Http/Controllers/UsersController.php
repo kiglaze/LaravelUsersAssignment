@@ -80,6 +80,11 @@ class UsersController extends Controller
     public function updateCurrent(Request $request)
     {
         if(auth()->check()) {
+            \request()->validate([
+                'name' => ['required'],
+                'email' => ['required', 'email', 'unique:users,email']
+            ]);
+
             $currentUserId = auth()->user()->id;
             $currentUser = User::find($currentUserId);
             $currentUser->name = $request->get('name');
