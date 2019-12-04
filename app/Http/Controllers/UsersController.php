@@ -82,8 +82,8 @@ class UsersController extends Controller
         if(auth()->check()) {
             $currentUserId = auth()->user()->getAuthIdentifier();
             \request()->validate([
-                'name' => ['required'],
-                'email' => ['required', 'email', 'unique:users,email,' . $currentUserId]
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'max:255', 'email', 'unique:users,email,' . $currentUserId]
             ]);
 
             $currentUser = User::find($currentUserId);
