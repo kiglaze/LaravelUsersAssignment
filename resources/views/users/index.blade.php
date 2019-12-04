@@ -8,6 +8,7 @@
                 @foreach($users as $user)
                     <li {{ ((auth()->check()) && (auth()->user()->getAuthIdentifier() === $user->id)) ? "class = current" : "" }}>
                         <p>{{ $user->name }}</p>
+                        <p>{{ $user->email }}</p>
                     </li>
                 @endforeach
             </ul>
