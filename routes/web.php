@@ -22,7 +22,3 @@ Route::get('/users/edit/{user}', 'UsersController@edit')->name('users.edit');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
