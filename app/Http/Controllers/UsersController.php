@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class UsersController extends Controller
 {
@@ -74,6 +75,18 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         //
+    }
+
+    public function updateCurrent(Request $request)
+    {
+        if(auth()->check()) {
+            $currentUserId = auth()->user()->id;
+            $currentUser = User::find($currentUserId);
+            $currentUser->name = $request->get('name');
+            $currentUser->email = $request->get('email');
+            $currentUser->save();
+        }
+        return Redirect::to('/');
     }
 
     /**
