@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Address;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -63,10 +64,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::make([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        $user->save();
+        $user->address()->create([
+            'street_address' => '123 Main St.',
+            'region' => 'NY',
+            'city' => 'NYC',
+            'country' => 'USA',
+            'postcode' => '12345'
+        ]);
+        return $user;
     }
 }
