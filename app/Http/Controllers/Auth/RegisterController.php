@@ -71,11 +71,11 @@ class RegisterController extends Controller
         ]);
         $user->save();
         $user->address()->create([
-            'street_address' => '123 Main St.',
-            'region' => 'NY',
-            'city' => 'NYC',
-            'country' => 'USA',
-            'postcode' => '12345'
+            'street_address' => $data['street_address'],
+            'region' => $data['region'],
+            'city' => $data['city'],
+            'country' => $data['country'],
+            'postcode' => $data['postcode']
         ]);
         return $user;
     }
