@@ -38,12 +38,7 @@
 
                             <div class="col-md-6">
                                 {{ Form::text('address[street_address]', null, ['class' => 'form-control', 'name' => 'street_address']) }}
-
-                                @error('street_address')
-                                <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
+                                <p class="help is-danger">{{ $errors->first('street_address') }}</p>
                             </div>
                         </div>
 
@@ -52,12 +47,7 @@
 
                             <div class="col-md-6">
                                 {{ Form::text('address[city]', null, ['class' => 'form-control', 'name' => 'city']) }}
-
-                                @error('city')
-                                <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
+                                <p class="help is-danger">{{ $errors->first('city') }}</p>
                             </div>
                         </div>
 
@@ -66,12 +56,7 @@
 
                             <div class="col-md-6">
                                 {{ Form::text('address[region]', null, ['class' => 'form-control', 'name' => 'region']) }}
-
-                                @error('region')
-                                <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
+                                <p class="help is-danger">{{ $errors->first('region') }}</p>
                             </div>
                         </div>
 
@@ -80,12 +65,7 @@
 
                             <div class="col-md-6">
                                 {{ Form::text('address[country]', null, ['class' => 'form-control', 'name' => 'country']) }}
-
-                                @error('country')
-                                <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
+                                <p class="help is-danger">{{ $errors->first('country') }}</p>
                             </div>
                         </div>
 
@@ -94,12 +74,7 @@
 
                             <div class="col-md-6">
                                 {{ Form::text('address[postcode]', null, ['class' => 'form-control', 'name' => 'postcode']) }}
-
-                                @error('postcode')
-                                <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
+                                <p class="help is-danger">{{ $errors->first('postcode') }}</p>
                             </div>
                         </div>
 
