@@ -11,22 +11,46 @@ h1 {
     margin: 0em 0em 0.5em 0em;
 }
 
+body {
+    background-color: $backgroundShade;
+}
+
 main {
-    margin: 0em 1.5em 0em 1.5em;
+    .main-column {
+        padding: 0em 1.5em 0em 1.5em;
+    }
 }
 
 section.users {
     ul.users-list {
         li {
             list-style: none;
-            border: 1px solid $black;
+            border: 1px solid $secondNaturePurple;
+            border-radius: 0.5em;
             margin: 0em 0em 1em 0em;
             padding: 1em 1em 1em 1em;
-
+            background-color: rgba($secondNaturePurple, .1);
             box-shadow: 0 2px 2px $shadow;
 
+            &:hover {
+                background-color: $secondNaturePurple;
+                border-color: $white;
+                color: $lightBlue;
+                box-shadow: 0 5px 5px $shadow;
+            }
+
             &.current {
-                color: $red;
+                border-width: 3px;
+                font-weight: 800;
+            }
+
+            .address {
+                border-top: 1px dot-dash $secondNaturePurple;
+                border-bottom: 1px dot-dash $secondNaturePurple;
+                > p {
+                    margin: 0;
+                    padding: 0;
+                }
             }
         }
     }
