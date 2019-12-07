@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', 'UsersController@index')->name('users.index');
-Route::get('/users', 'UsersController@index');
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');
+Route::get('/users', 'UsersController@index')->name('users.index');
 Route::patch('/users/updateCurrent', 'UsersController@updateCurrent')->name('users.updateCurrent');
 
 Auth::routes();
