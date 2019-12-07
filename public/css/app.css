@@ -11373,6 +11373,10 @@ main .main-column {
   font-weight: normal;
 }
 
+.error-message p {
+  margin-bottom: 0;
+}
+
 .form-group.required label:after {
   content: "*";
   color: red;

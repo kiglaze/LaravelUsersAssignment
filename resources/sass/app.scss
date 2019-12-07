@@ -24,6 +24,9 @@ main {
 .error-message {
     color: $red;
     font-weight: normal;
+    p {
+        margin-bottom: 0;
+    }
 }
 
 .form-group.required label:after {
