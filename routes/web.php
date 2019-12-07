@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', 'UsersController@index')->name('default');
 Route::get('/users', 'UsersController@index')->name('users.index');
 Route::patch('/users/updateCurrent', 'UsersController@updateCurrent')->name('users.updateCurrent');
 

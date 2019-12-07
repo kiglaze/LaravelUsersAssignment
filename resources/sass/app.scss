@@ -36,6 +36,14 @@ main {
 
 section.users {
     ul.users-list {
+        &.user-view-effects {
+            li:hover {
+                background-color: $secondNaturePurple;
+                border-color: $white;
+                color: $lightBlue;
+                box-shadow: 0 5px 5px $shadow;
+            }
+        }
         li {
             list-style: none;
             border: 1px solid $secondNaturePurple;
@@ -44,13 +52,6 @@ section.users {
             padding: 1em 1em 1em 1em;
             background-color: rgba($secondNaturePurple, .1);
             box-shadow: 0 2px 2px $shadow;
-
-            &:hover {
-                background-color: $secondNaturePurple;
-                border-color: $white;
-                color: $lightBlue;
-                box-shadow: 0 5px 5px $shadow;
-            }
 
             &.current {
                 border-width: 3px;
