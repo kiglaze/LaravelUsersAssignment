@@ -58,13 +58,12 @@ section.users {
                 font-weight: 800;
             }
 
+            p {
+                margin: 0;
+                padding: 0;
+            }
             .address {
-                border-top: 1px dot-dash $secondNaturePurple;
-                border-bottom: 1px dot-dash $secondNaturePurple;
-                > p {
-                    margin: 0;
-                    padding: 0;
-                }
+                margin-top: 1em;
             }
         }
     }
