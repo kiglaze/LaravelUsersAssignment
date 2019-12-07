@@ -21,6 +21,16 @@ main {
     }
 }
 
+.error-message {
+    color: $red;
+    font-weight: normal;
+}
+
+.form-group.required label:after {
+    content:"*";
+    color:red;
+}
+
 section.users {
     ul.users-list {
         li {

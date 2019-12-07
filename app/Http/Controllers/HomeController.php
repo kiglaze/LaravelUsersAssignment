@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $currentUser = (auth()->check()) ? (auth()->user()) : null;
+        return view('home', ['user' => $currentUser]);
     }
 }

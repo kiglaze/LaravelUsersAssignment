@@ -40,7 +40,7 @@ class UsersController extends Controller
     {
         if(auth()->check()) {
             $currentUserId = auth()->user()->getAuthIdentifier();
-            \request()->validate([
+            $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'max:255', 'email', 'unique:users,email,' . $currentUserId],
                 'street_address' => ['required', 'string', 'max:255'],

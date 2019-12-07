@@ -11368,6 +11368,16 @@ main .main-column {
   padding: 0em 1.5em 0em 1.5em;
 }
 
+.error-message {
+  color: #e3342f;
+  font-weight: normal;
+}
+
+.form-group.required label:after {
+  content: "*";
+  color: red;
+}
+
 section.users ul.users-list li {
   list-style: none;
   border: 1px solid #522d6d;
