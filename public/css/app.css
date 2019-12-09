@@ -11382,6 +11382,13 @@ main .main-column {
   color: red;
 }
 
+section.users ul.users-list.user-view-effects li:hover {
+  background-color: #522d6d;
+  border-color: #eee;
+  color: #A2DED0;
+  box-shadow: 0 5px 5px #ccc;
+}
+
 section.users ul.users-list li {
   list-style: none;
   border: 1px solid #522d6d;
@@ -11392,25 +11399,17 @@ section.users ul.users-list li {
   box-shadow: 0 2px 2px #ccc;
 }
 
-section.users ul.users-list li:hover {
-  background-color: #522d6d;
-  border-color: #eee;
-  color: #A2DED0;
-  box-shadow: 0 5px 5px #ccc;
-}
-
 section.users ul.users-list li.current {
   border-width: 3px;
   font-weight: 800;
 }
 
-section.users ul.users-list li .address {
-  border-top: 1px dot-dash #522d6d;
-  border-bottom: 1px dot-dash #522d6d;
-}
-
-section.users ul.users-list li .address > p {
+section.users ul.users-list li p {
   margin: 0;
   padding: 0;
+}
+
+section.users ul.users-list li .address {
+  margin-top: 1em;
 }
 
