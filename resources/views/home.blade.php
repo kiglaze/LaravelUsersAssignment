@@ -55,7 +55,7 @@
                                 @error('street_address')
                                     <?php $additionalOptions['class'] .= ' is-invalid'; ?>
                                 @enderror
-                                {{ Form::text('address[street_address]', $user->address->street_address, $additionalOptions) }}
+                                {{ Form::text('address[street_address]', old('street_address'), $additionalOptions) }}
                                 @error('street_address')
                                     <span class="error-message" role="alert">
                                         <p>{{ $errors->first('street_address') }}</p>
@@ -72,7 +72,7 @@
                                 @error('city')
                                     <?php $additionalOptions['class'] .= ' is-invalid'; ?>
                                 @enderror
-                                {{ Form::text('address[city]', $user->address->city, $additionalOptions) }}
+                                {{ Form::text('address[city]', old('city'), $additionalOptions) }}
                                 @error('city')
                                     <span class="error-message" role="alert">
                                         <p>{{ $errors->first('city') }}</p>
@@ -89,7 +89,7 @@
                                 @error('region')
                                     <?php $additionalOptions['class'] .= ' is-invalid'; ?>
                                 @enderror
-                                {{ Form::text('address[region]', $user->address->region, $additionalOptions) }}
+                                {{ Form::text('address[region]', old('region'), $additionalOptions) }}
                                 @error('region')
                                     <span class="error-message" role="alert">
                                         <p>{{ $errors->first('region') }}</p>
@@ -106,7 +106,7 @@
                                 @error('country')
                                     <?php $additionalOptions['class'] .= ' is-invalid'; ?>
                                 @enderror
-                                {{ Form::text('address[country]', $user->address->country, $additionalOptions) }}
+                                {{ Form::text('address[country]', old('country'), $additionalOptions) }}
                                 @error('country')
                                     <span class="error-message" role="alert">
                                         <p>{{ $errors->first('country') }}</p>
@@ -123,7 +123,7 @@
                                 @error('postcode')
                                     <?php $additionalOptions['class'] .= ' is-invalid'; ?>
                                 @enderror
-                                {{ Form::text('address[postcode]', $user->address->postcode, $additionalOptions) }}
+                                {{ Form::text('address[postcode]', old('postcode'), $additionalOptions) }}
                                 @error('postcode')
                                     <span class="error-message" role="alert">
                                         <p>{{ $errors->first('postcode') }}</p>
