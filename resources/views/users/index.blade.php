@@ -11,11 +11,13 @@
                         @auth
                             <p>{{ $user->email }}</p>
                             @if($user->address)
-                                <div class="address">
-                                    <p>{{ $user->address->street_address }}</p>
-                                    <p>{{ $user->address->city }}, {{ $user->address->region }}</p>
-                                    <p>{{ $user->address->country }}, {{ $user->address->postcode }}</p>
-                                </div>
+                                <address-component
+                                    street_address="{{ $user->address->street_address }}"
+                                    city="{{ $user->address->city }}"
+                                    region="{{ $user->address->region }}"
+                                    country="{{ $user->address->country }}"
+                                    postcode="{{ $user->address->postcode }}">
+                                </address-component>
                             @endif
                         @endauth
                     </li>
